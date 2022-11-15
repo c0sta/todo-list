@@ -2,8 +2,17 @@ import styled, { css } from 'styled-components'
 
 export const Container = styled.main`
   ${({ theme }) => css`
-    width: 100vw;
-    height: 100vh;
-    background: ${theme.background};
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    padding-top: 16px;
+    @media (min-width: ${theme.breakpoints.tablet}) {
+      padding: 16px 64px;
+    }
+    @media (max-width: ${theme.breakpoints.mobile}) {
+      padding: 16px;
+    } ;
   `}
 `

@@ -19,6 +19,9 @@ export const Container = styled.header`
     @media (max-width: ${theme.breakpoints.tablet}) and (min-width: ${theme
         .breakpoints.mobile}) {
       height: 10%;
+    }
+    @media (min-width: ${theme.breakpoints.desktop}) {
+      height: 25%;
     } ;
   `};
 `
@@ -43,7 +46,7 @@ export const Logo = styled.section`
 
     @media (max-width: ${theme.breakpoints.mobile}) {
       gap: 8px;
-      font-size: 0.8rem;
+      font-size: 1rem;
       svg {
         height: 24px;
       }

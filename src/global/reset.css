@@ -6,3 +6,12 @@
   font-size: 1em;
   font-family: Inter, sans-serif;
 }
+
+html,
+body,
+#root {
+  background: #1a1a1a;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}

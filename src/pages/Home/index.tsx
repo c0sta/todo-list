@@ -5,10 +5,12 @@ import { Container } from './styles'
 
 export const Home = () => {
   return (
-    <Container>
+    <>
       <Header />
-      <CreateTask />
-      <TaskList />
-    </Container>
+      <Container>
+        <CreateTask />
+        <TaskList />
+      </Container>
+    </>
   )
 }
