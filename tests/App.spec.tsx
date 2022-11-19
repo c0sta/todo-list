@@ -1,10 +1,9 @@
 import App from '../src/App'
-import { render, screen } from '@testing-library/react'
+import { customRender } from './utils'
 
 describe('App', () => {
   it('renders headline', () => {
-    render(<App />)
-    const app = screen.getByText('Hello Vite + React!')
+    const { container: app } = customRender(<App />)
 
     expect(app).toBeInTheDocument()
   })
