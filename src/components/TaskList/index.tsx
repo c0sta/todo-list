@@ -8,7 +8,6 @@ export const TaskList = ({ tasks }: Props) => {
   const createdTasks = tasks.length
   const finishedTasks = tasks.filter(task => task.checked).length
 
-  if (!tasks.length) return <EmptyList />
   return (
     <Container>
       <Header>
@@ -22,14 +21,18 @@ export const TaskList = ({ tasks }: Props) => {
         </InfoContainer>
       </Header>
       <List>
-        {tasks.map(task => (
-          <Task
-            key={task.id}
-            checked={task.checked}
-            text={task.text}
-            onDelete={() => console.log('deleting Task')}
-          />
-        ))}
+        {tasks.length ? (
+          tasks.map(task => (
+            <Task
+              key={task.id}
+              checked={task.checked}
+              text={task.text}
+              onDelete={() => console.log('deleting Task')}
+            />
+          ))
+        ) : (
+          <EmptyList />
+        )}
       </List>
     </Container>
   )

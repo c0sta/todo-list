@@ -5,6 +5,14 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 24px;
+  width: 100%;
+  max-width: calc(638px + 90px + 8px);
+
+  ${({ theme }) => css`
+    @media (max-width: ${theme.breakpoints.tablet}) {
+      padding-top: 16px;
+    }
+  `}
 `
 
 export const List = styled.ul`
@@ -12,7 +20,6 @@ export const List = styled.ul`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: calc(638px + 90px + 8px);
   gap: 12px;
 `
 
@@ -33,7 +40,6 @@ export const Tag = styled.span`
     height: 20px;
     border-radius: 50%;
     background: ${theme.colors.gray['400']};
-
     color: ${theme.colors.gray['200']};
     font-size: 12px;
     font-weight: bold;

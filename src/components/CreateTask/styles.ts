@@ -18,7 +18,7 @@ export const Container = styled.section`
 
 export const Input = styled.input`
   ${({ theme }) => css`
-    width: 80%;
+    width: 100%;
     max-width: 638px;
     border-radius: 8px;
     border: 1px solid ${theme.colors.gray['700']};
