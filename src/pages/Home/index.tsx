@@ -1,6 +1,4 @@
-import { CreateTask } from '../../components/CreateTask'
-import { Header } from '../../components/Header'
-import { TaskList } from '../../components/TaskList'
+import { Header, CreateTask, TaskList } from '../../components'
 import { Container } from './styles'
 
 export const Home = () => {
@@ -9,7 +7,7 @@ export const Home = () => {
       <Header />
       <Container>
         <CreateTask />
-        <TaskList />
+        <TaskList tasks={[]} />
       </Container>
     </>
   )
