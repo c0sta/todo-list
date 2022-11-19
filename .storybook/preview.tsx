@@ -16,7 +16,17 @@ export const parameters = {
 export const decorators = [
   Story => (
     <ThemeProvider theme={theme}>
-      <Story />
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          width: '100%',
+          height: '100%',
+          padding: '32px'
+        }}
+      >
+        <Story />
+      </div>
     </ThemeProvider>
   )
 ]

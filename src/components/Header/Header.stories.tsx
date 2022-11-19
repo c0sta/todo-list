@@ -8,7 +8,5 @@ export default {
 } as ComponentMeta<typeof HeaderComponent>
 
 export const Header: ComponentStory<typeof HeaderComponent> = () => (
-  <div style={{ height: '100vh' }}>
-    <HeaderComponent />
-  </div>
+  <HeaderComponent />
 )
