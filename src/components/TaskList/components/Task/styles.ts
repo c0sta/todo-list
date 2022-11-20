@@ -9,7 +9,7 @@ export const Task = styled.li`
     justify-content: space-between;
     gap: 8px;
     padding: 16px;
-    min-height: 72px;
+    height: 72px;
     width: 100%;
 
     border-radius: 8px;
