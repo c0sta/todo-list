@@ -5,15 +5,7 @@ import { customRender } from '../../../../../../tests/utils'
 
 describe('Task', () => {
   it('should render', () => {
-    customRender(
-      <Task
-        checked={false}
-        text='Lorem ipsum'
-        onDelete={() => {
-          return
-        }}
-      />
-    )
+    customRender(<Task id='1' checked={false} text='Lorem ipsum' />)
 
     const task = screen.getByText('Lorem ipsum')
     expect(task).toBeInTheDocument()
