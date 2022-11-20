@@ -7,6 +7,7 @@ export const Container = styled.div`
   gap: 24px;
   width: 100%;
   max-width: calc(638px + 90px + 8px);
+  max-height: calc(100vh - 260px);
 
   ${({ theme }) => css`
     @media (max-width: ${theme.breakpoints.tablet}) {
@@ -21,6 +22,27 @@ export const List = styled.ul`
   align-items: center;
   width: 100%;
   gap: 12px;
+  overflow-y: auto;
+  ${({ theme }) => css`
+    ::-webkit-scrollbar {
+      border: 3px solid ${theme.colors.gray['600']};
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: ${theme.colors.gray['600']};
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border: 3px solid ${theme.colors.gray['600']};
+      border-radius: 8px;
+      background: ${theme.colors.gray['400']};
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: ${theme.colors.gray['500']};
+    }
+  `}
 `
 
 export const Header = styled.header`

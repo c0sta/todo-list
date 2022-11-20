@@ -20,20 +20,20 @@ export const TaskList = ({ tasks }: Props) => {
           <Tag>{finishedTasks}</Tag>
         </InfoContainer>
       </Header>
-      <List>
-        {tasks.length ? (
-          tasks.map(task => (
+      {tasks.length ? (
+        <List>
+          {tasks.map(task => (
             <Task
               key={task.id}
+              id={task.id}
               checked={task.checked}
               text={task.text}
-              onDelete={() => console.log('deleting Task')}
             />
-          ))
-        ) : (
-          <EmptyList />
-        )}
-      </List>
+          ))}
+        </List>
+      ) : (
+        <EmptyList />
+      )}
     </Container>
   )
 }
