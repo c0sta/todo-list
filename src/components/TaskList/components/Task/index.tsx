@@ -1,3 +1,4 @@
+import { useTodo } from '../../../../hooks'
 import { CheckMark, Radio, Task as TaskStyled, Text, Thrash } from './styles'
 
 export interface ITask {
@@ -6,14 +7,23 @@ export interface ITask {
   text: string
 }
 
-interface Props extends Omit<ITask, 'id'> {
-  onDelete: () => void
-}
-export const Task = ({ checked, text, onDelete }: Props) => {
+type Props = ITask
+export const Task = ({ id, checked, text }: Props) => {
+  const { actions } = useTodo()
+
+  const onDelete = () => actions.delete({ id })
+
+  const onFinish = () => actions.finish({ id })
+
   return (
     <TaskStyled>
-      <Radio type='radio' checked={checked} data-testid='radio' />
-      {checked && <CheckMark />}
+      <Radio
+        type='radio'
+        checked={checked}
+        data-testid='radio'
+        onChange={onFinish}
+      />
+      {checked && <CheckMark onClick={onFinish} />}
 
       <Text>{text}</Text>
 

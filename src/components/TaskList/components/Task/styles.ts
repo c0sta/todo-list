@@ -58,6 +58,9 @@ export const CheckMark = styled(FaCheck)`
     margin-left: 5px;
     font-size: 8px;
     color: ${theme.colors.gray['100']};
+    :hover {
+      cursor: pointer;
+    }
   `}
 `
 
