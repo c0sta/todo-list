@@ -9,7 +9,7 @@ export const Task = styled.li`
     justify-content: space-between;
     gap: 8px;
     padding: 16px;
-    height: 72px;
+    min-height: 72px;
     width: 100%;
 
     border-radius: 8px;
@@ -58,6 +58,9 @@ export const CheckMark = styled(FaCheck)`
     margin-left: 5px;
     font-size: 8px;
     color: ${theme.colors.gray['100']};
+    :hover {
+      cursor: pointer;
+    }
   `}
 `
 
